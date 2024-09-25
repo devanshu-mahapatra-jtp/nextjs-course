@@ -18,7 +18,7 @@ if (process.env.VERCEL_ENV === "development") {
   neonConfig.pipelineConnect = false;
 }
 
-// Create a new pool using the connection string from your .env file
+// Create a new pool using the connection string from .env file
 const pool = new Pool({ connectionString: process.env.POSTGRES_URL });
 
 async function getUser(email: string): Promise<User | undefined> {
